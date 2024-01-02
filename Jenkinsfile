@@ -8,12 +8,5 @@ pipeline{
 				deleteDir()
 			}
 		}
-		stage("Clone")
-		{
-			steps
-			{
-				sh "git clone https://github.com/alexanderkunjukunju/AdminUtil.git"
-			}
-		}
 	}
 }
