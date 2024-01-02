@@ -1,12 +1,16 @@
 pipeline{
 	agent any
 	stages {
-		stage("Clean up")
-		{
-			steps 
+		stage('Build') {
+			dir ('AdminUtil')
 			{
-				deleteDir()
-			}
+				steps {
+					bat "msbuild.exe AdminUtil.sln /nologo /nr:false  /p:platform=\"x64\" /p:configuration=\"Debug\" /t:clean;restore;rebuild"
+				}
+			{
 		}
 	}
 }
+
+
+
