@@ -6,7 +6,7 @@ pipeline{
 		{
 			steps 
 			{
-				sh "msbuild.exe AdminUtil.sln /nologo /nr:false  /p:platform=\"Any CPU\" /p:configuration=\"Release\" /t:clean;restore;rebuild"
+				bat "msbuild.exe AdminUtil.sln /nologo /nr:false  /p:platform=\"Any CPU\" /p:configuration=\"Release\" /t:clean;restore;rebuild"
 			}
 		}
 	}
